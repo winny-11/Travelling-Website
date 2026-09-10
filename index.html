@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c4ec52714e.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="m-0 overflow-x-hidden p-0 bg-[#fdfcfc]" style="font-family: 'Raleway', Arial, Helvetica, sans-serif;">
+
+    <nav class="h-16 bg-white">
+        <ul class="m-0 flex h-full list-none items-stretch justify-between whitespace-nowrap p-0 md:justify-between">
+            <li
+                class="flex h-full items-center text-[#f44336] transition-colors duration-200 hover:bg-[#f44336] hover:text-white">
+                <h3
+                    class="m-0 flex h-full items-center px-3 text-sm font-semibold sm:px-5 sm:text-base md:px-5 md:text-base">
+                    <i class="fa-solid fa-stamp mr-2"></i>LOGO
+                </h3>
+            </li>
+
+            <li
+                class="flex h-full items-center px-3 text-gray-500 transition-colors duration-200 hover:bg-[#f44336] hover:text-white sm:px-5 md:px-5">
+                <i class="fa-solid fa-magnifying-glass text-lg sm:text-xl md:text-xl"></i>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="relative">
+        <img src="images/travel.1.jpg"
+            alt="Wide scenic travel view of a city skyline with a dramatic building and distant landscape under soft natural light"
+            class="block h-[420px] w-full object-cover sm:h-[400px] md:h-[500px]">
+
+        <section class="absolute left-1/2 top-1/2 w-[90%] max-w-4xl -translate-x-1/2 -translate-y-1/2">
+            <div class="tabs-wrapper w-full">
+                <input type="radio" name="travel-tab" id="flights-tab" checked class="hidden">
+                <input type="radio" name="travel-tab" id="hotels-tab" class="hidden">
+                <input type="radio" name="travel-tab" id="rentals-tab" class="hidden">
+
+                <div
+                    class="flex w-full items-stretch justify-center overflow-hidden rounded-none bg-black text-white sm:flex-row">
+                    <label for="flights-tab"
+                        class="tab-label flex-1 cursor-pointer bg-black p-3 text-center text-sm text-white transition-colors duration-200 hover:bg-[#616161] sm:p-4 sm:text-base">
+                        <i class="fa-solid fa-plane-up"></i> Flights
+                    </label>
+                    <label for="hotels-tab"
+                        class="tab-label flex-1 cursor-pointer bg-black p-3 text-center text-sm text-white transition-colors duration-200 hover:bg-[#616161] sm:p-4 sm:text-base">
+                        <i class="fa-solid fa-bed"></i> Hotels
+                    </label>
+                    <label for="rentals-tab"
+                        class="tab-label flex-1 cursor-pointer bg-black p-3 text-center text-sm text-white transition-colors duration-200 hover:bg-[#616161] sm:p-4 sm:text-base">
+                        <i class="fa-solid fa-car"></i> Rentals
+                    </label>
+                </div>
+
+                <div class="bg-white p-4 shadow-lg sm:p-6">
+                    <div class="tab-content flights-content">
+                        <h5 class="mb-4 text-2xl font-semibold text-gray-800 sm:text-3xl">
+                            Travel the World with Us
+                        </h5>
+
+                        <form class="flex flex-col gap-4">
+                            <div class="flex flex-col gap-4 md:flex-row">
+                                <div class="w-full md:w-1/2">
+                                    <label for="from" class="mb-1 block text-sm font-medium text-gray-700">From:</label>
+                                    <input type="text" id="from" name="from" placeholder="Departing from"
+                                        class="w-full border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-red-400">
+                                </div>
+
+                                <div class="w-full md:w-1/2">
+                                    <label for="to" class="mb-1 block text-sm font-medium text-gray-700">To:</label>
+                                    <input type="text" id="to" name="to" placeholder="Arriving at"
+                                        class="w-full border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-red-400">
+                                </div>
+                            </div>
+
+                            <div class="flex justify-start">
+                                <button type="submit"
+                                    class="w-full rounded bg-[#616161] p-2 text-center text-sm text-white transition-colors duration-200 hover:bg-[#fce7dc] hover:text-[#616161] sm:w-40">Search
+                                    and find dates</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-content hotels-content hidden">
+                        <h5 class="mb-4 text-2xl font-semibold text-gray-800 sm:text-3xl">
+                            Find the best hotels
+                        </h5>
+                        <p class="mb-2 text-gray-700">
+                            Book a hotel with us and get the best fares and promotions.
+                        </p>
+                        <p class="text-gray-700">
+                            We know hotels - we know comfort.
+                        </p>
+
+                        <button
+                            class="mt-4 w-full rounded bg-[#616161] p-2 text-center text-sm text-white transition-colors duration-200 hover:bg-[#fce7dc] hover:text-[#616161] sm:w-40">Search
+                            Hotels</button>
+                    </div>
+
+                    <div class="tab-content rentals-content hidden">
+                        <h5 class="mb-4 text-2xl font-semibold text-gray-800 sm:text-3xl">
+                            Best car rental in the world!
+                        </h5>
+                        <p class="text-gray-700">
+                            <span style="background-color:red; height:20px;">DISCOUNT!</span> Special offer if you book
+                            today: 25% off anywhere in the world with CarServiceRentalRUs
+
+
+                        </p>
+                        <input type="text" placeholder="Pick-up point"
+                            class="mt-4 w-full border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-red-400">
+                        <button
+                            class="mt-4 w-full rounded bg-[#616161] p-2 text-center text-sm text-white transition-colors duration-200 hover:bg-[#fce7dc] hover:text-[#616161] sm:w-40">Search
+                            Availability</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="m-6 p-4 sm:m-10 lg:m-14">
+        <div>
+            <h3 class="text-3xl sm:text-4xl">Good Offers Right Now</h3>
+            <p>Up to 50% discount.</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-3 md:grid-cols-4 md:grid-rows-2">
+            <div class="relative col-span-1 row-span-1 overflow-hidden md:col-span-2 md:row-span-2">
+                <img class="h-full w-full object-cover block" src="images/travel2.jpg"
+                    alt="Historic city street with classic architecture and a calm travel atmosphere under a soft overcast sky">
+                <p class="absolute bottom-3 left-3 px-2 py-1 text-sm font-semibold text-white">Cinque Terre</p>
+            </div>
+
+            <div class="relative overflow-hidden">
+                <img class="h-full w-full object-cover block" src="images/travel3.jpg"
+                    alt="Charming urban scene with old stone buildings and tree-lined streets creating a warm European travel mood">
+                <p class="absolute bottom-3 left-3 px-2 py-1 text-sm font-semibold text-white">New York</p>
+            </div>
+
+            <div class="relative overflow-hidden">
+                <img class="h-full w-full object-cover block" src="images/travel4.jpg"
+                    alt="Beautiful travel destination with layered city buildings and a quiet street scene filled with light and depth">
+                <p class="absolute bottom-3 left-3 px-2 py-1 text-sm font-semibold text-white">San Francisco</p>
+            </div>
+
+            <div class="relative overflow-hidden">
+                <img class="h-full w-full object-cover block" src="images/travel5.jpg"
+                    alt="Relaxed travel setting with an inviting neighborhood view and soft natural light across the buildings">
+                <p class="absolute bottom-3 left-3 px-2 py-1 text-sm font-semibold text-white">Pisa</p>
+            </div>
+
+            <div class="relative overflow-hidden">
+                <img class="h-full w-full object-cover block" src="images/travel6.jpg"
+                    alt="Paris street with the Eiffel Tower rising above nearby apartment buildings and bare winter trees under a quiet gray sky">
+                <p class="absolute bottom-3 left-3 px-2 py-1 text-sm font-semibold text-white">Paris</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mx-auto my-6 w-[92%] max-w-5xl p-2 sm:p-4 lg:my-14">
+        <div>
+            <h3 class="text-3xl sm:text-4xl">Explore Nature</h3>
+            <p>Travel with us and see nature at its finest.</p>
+        </div>
+
+        <div class="mt-6 flex flex-col gap-6 md:flex-row md:justify-between">
+            <div class="w-full bg-white shadow-md md:w-[46%]">
+                <img src="images/travel7.jpg" alt="Breathtaking natural landscape with mountains and a clear blue sky"
+                    class="block h-72 w-full object-cover">
+
+                <div class="space-y-3 p-4">
+                    <h3 class="text-xl font-semibold">West Coast, Norway</h3>
+                    <p class="text-gray-400">Roundtrip from $79</p>
+                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                    <button
+                        class="my-6 rounded bg-[#616161] px-4 py-2 text-sm text-white hover:bg-[#fce7dc] hover:text-[#616161]">Buy
+                        Tickets</button>
+                </div>
+            </div>
+
+            <div class="w-full bg-white shadow-md md:w-[46%]">
+                <img src="images/travel8.jpg"
+                    alt="Serene travel scene with a calm lake reflecting the surrounding mountains and sky"
+                    class="block h-72 w-full object-cover">
+
+                <div class="space-y-3 p-4">
+                    <h3 class="text-xl font-semibold">Mountains, Austria</h3>
+                    <p class="text-gray-400">One-way from $39</p>
+                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                    <button
+                        class="my-6 rounded bg-[#616161] px-4 py-2 text-sm text-white hover:bg-[#fce7dc] hover:text-[#616161]">Buy
+                        Tickets</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="mx-auto my-6 w-[92%] max-w-5xl rounded-md bg-gray-800/50 p-4 text-left transition-colors duration-200 hover:bg-black sm:my-10 sm:p-8 text-white">
+        <h3 class="text-left text-2xl font-semibold sm:text-3xl">Get the best offer first!</h3>
+        <p class="mt-2 text-left">Join our newsletter.</p>
+
+        <label for="email" class="mt-5 mb-2 block text-left text-sm font-medium text-white">Email address:</label>
+        <input type="email" id="email"
+            class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-left text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+            placeholder="Enter your email">
+
+        <button
+            class="mt-4 w-full rounded bg-[#f44336] p-2 text-center text-sm text-white transition-colors duration-200 hover:bg-[#fce7dc] hover:text-[#f44336] sm:w-40">Subscribe</button>
+    </section>
+
+
+
+    <section class="mx-auto my-6 w-[92%] max-w-5xl space-y-4 rounded-md p-4 text-left sm:p-8">
+        <h3 class="text-left text-2xl font-semibold sm:text-3xl">Contact</h3>
+        <p class="text-left">Let us book your next trip!</p>
+
+        <div class="flex items-center gap-3">
+            <i class="fa-solid fa-location-pin text-gray-600"></i>
+            <p class="text-left">Chicago, US</p>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <i class="fa-solid fa-phone text-gray-600"></i>
+            <p class="text-left">Phone: +00 151515</p>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <i class="fa-regular fa-envelope text-gray-600"></i>
+            <p class="text-left">Email: mail@mail.com</p>
+        </div>
+
+        <form class="mt-6 space-y-4">
+            <div class="flex items-center gap-3">
+                <input type="text" placeholder="Name"
+                    class="w-full border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-red-400">
+            </div>
+
+            <div class="flex items-center gap-3">
+                <input type="email" placeholder="Email"
+                    class="w-full border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-red-400">
+            </div>
+
+            <div class="flex items-center gap-3">
+                <input type="text" placeholder="Message"
+                    class="w-full border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-red-400">
+            </div>
+
+            <button type="submit"
+                class="w-full bg-black p-4 text-center text-md text-white transition-colors duration-200 hover:bg-[#fce7dc] hover:text-[#616161] sm:w-40">Send
+                Message</button>
+        </form>
+    </section>
+
+
+    <footer class="mx-auto my-10 flex max-w-5xl flex-col items-center justify-center space-y-3 text-center text-gray-700">
+        <h5 class="text-xl font-semibold">Find Us On</h5>
+        <div class="flex items-center justify-center gap-2 text-2xl">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-snapchat"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+        <p>Powered by <a href="" class="underline hover:text-blue-600">W3.Schools</a></p>
+    </footer>
+
+
+    <style>
+        #flights-tab:checked~.bg-white .flights-content,
+        #hotels-tab:checked~.bg-white .hotels-content,
+        #rentals-tab:checked~.bg-white .rentals-content {
+            display: block;
+        }
+
+        #flights-tab:not(:checked)~.bg-white .flights-content,
+        #hotels-tab:not(:checked)~.bg-white .hotels-content,
+        #rentals-tab:not(:checked)~.bg-white .rentals-content {
+            display: none;
+        }
+    </style>
+
+</body>
+
+</html>
