@@ -11,7 +11,7 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/c4ec52714e.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" type="image/jpeg" href="images/favicon.jpg"/>
+    <link rel="shortcut icon" type="image/jpeg" href="images/favicon.jpg" />
 </head>
 
 <body class="m-0 overflow-x-hidden p-0 bg-[#fdfcfc]" style="font-family: 'Raleway', Arial, Helvetica, sans-serif;">
@@ -257,14 +257,14 @@
             </div>
 
             <button type="submit"
-                class=" w-full bg-black p-4 text-center text-md text-white transition-colors animate-pulse duration-200 hover:bg-[#fce7dc] hover:text-[#616161] sm:w-40">Send
+                class=" w-full bg-black p-4 text-center rounded-full text-md text-white animate-pulse duration-200 hover:bg-[#fce7dc] hover:text-[#616161] sm:w-40">Send
                 Message</button>
         </form>
     </section>
 
 
     <footer
-        class="reveal mx-auto my-10 flex max-w-5xl flex-col items-center justify-center space-y-3 text-center text-gray-700">
+        class="mx-auto my-10 flex max-w-5xl flex-col items-center justify-center space-y-3 text-center text-gray-600">
         <h5 class="text-xl font-semibold">Find Us On</h5>
         <div class="flex items-center justify-center gap-2 text-2xl">
             <i
@@ -291,17 +291,28 @@
 
         .reveal {
             opacity: 0;
-            animation: fadeUp 1.5s ease forwards;
+            animation: slideUp linear both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 55%;
         }
 
-        @keyframes fadeUp {
+        @keyframes slideUp {
             from {
                 opacity: 0;
-                transform: translateY(42px);
+                transform: translateX(42px);
             }
+
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateX(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                animation: none;
+                opacity: 1;
+                transform: none;
             }
         }
 
