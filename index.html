@@ -11,7 +11,7 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/c4ec52714e.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" type="image/jpeg" href="images/favicon.jpg" />
+    <link rel="shortcut icon" type="image/jpeg" href="images/favicon.jpg" class="rounded-md"/>
 </head>
 
 <body class="m-0 overflow-x-hidden p-0 bg-[#fdfcfc]" style="font-family: 'Raleway', Arial, Helvetica, sans-serif;">
@@ -39,87 +39,87 @@
             class="block h-[420px] w-full object-cover sm:h-[400px] md:h-[500px]">
 
         <section
-            class="absolute left-1/2 top-1/2 w-[90%] max-w-4xl -translate-x-1/2 -translate-y-1/2 opacity-85 transition-opacity duration-300 sm:w-[80%] rounded-lg overflow-hidden">
+            class="absolute left-1/2 top-1/2 w-[90%] max-w-4xl -translate-x-1/2 -translate-y-1/2 rounded-lg overflow-hidden sm:w-[80%]">
             <div class="tabs-wrapper w-full">
                 <input type="radio" name="travel-tab" id="flights-tab" checked class="hidden">
                 <input type="radio" name="travel-tab" id="hotels-tab" class="hidden">
                 <input type="radio" name="travel-tab" id="rentals-tab" class="hidden">
 
                 <div
-                    class="flex w-full items-stretch justify-center overflow-hidden rounded-none bg-black text-white sm:flex-row">
+                    class="flex w-full items-stretch justify-center overflow-hidden rounded-none bg-black/30 text-white sm:flex-row">
                     <label for="flights-tab"
-                        class="tab-label flex-1 cursor-pointer bg-black p-3 text-center text-sm text-white transition-colors duration-200 hover:bg-[#616161] sm:p-4 sm:text-base">
+                        class="tab-label flex-1 cursor-pointer bg-black/40 p-3 text-center text-sm text-white transition-colors duration-200 hover:bg-[#616161] sm:p-4 sm:text-base">
                         <i class="fa-solid fa-plane-up"></i> Flights
                     </label>
                     <label for="hotels-tab"
-                        class="tab-label flex-1 cursor-pointer bg-black p-3 text-center text-sm text-white transition-colors duration-200 hover:bg-[#616161] sm:p-4 sm:text-base">
+                        class="tab-label flex-1 cursor-pointer bg-black/40 p-3 text-center text-sm text-white transition-colors duration-200 hover:bg-[#616161] sm:p-4 sm:text-base">
                         <i class="fa-solid fa-bed"></i> Hotels
                     </label>
                     <label for="rentals-tab"
-                        class="tab-label flex-1 cursor-pointer bg-black p-3 text-center text-sm text-white transition-colors duration-200 hover:bg-[#616161] sm:p-4 sm:text-base">
+                        class="tab-label flex-1 cursor-pointer bg-black/40 p-3 text-center text-sm text-white transition-colors duration-200 hover:bg-[#616161] sm:p-4 sm:text-base">
                         <i class="fa-solid fa-car"></i> Rentals
                     </label>
                 </div>
 
-                <div class="bg-white p-4 shadow-lg sm:p-6">
+                <div class="tab-panel bg-white/40 p-4 text-gray-900 shadow-lg backdrop-blur-[1px] sm:p-6">
                     <div class="tab-content flights-content">
-                        <h5 class="mb-4 text-2xl font-semibold text-gray-800 sm:text-3xl">
+                        <h5 class="mb-4 text-2xl font-semibold text-black sm:text-3xl">
                             Travel the World with Us
                         </h5>
 
                         <form class="flex flex-col gap-4">
                             <div class="flex flex-col gap-4 md:flex-row">
                                 <div class="w-full md:w-1/2">
-                                    <label for="from" class="mb-1 block text-sm font-medium text-gray-700">From:</label>
+                                    <label for="from" class="mb-1 block text-sm font-semibold text-black">From:</label>
                                     <input type="text" id="from" name="from" placeholder="Departing from"
-                                        class="w-full border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-red-400">
+                                        class="w-full border border-gray-300 bg-white/90 p-2 text-gray-900 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-red-400">
                                 </div>
 
                                 <div class="w-full md:w-1/2">
-                                    <label for="to" class="mb-1 block text-sm font-medium text-gray-700">To:</label>
+                                    <label for="to" class="mb-1 block text-sm font-semibold text-black">To:</label>
                                     <input type="text" id="to" name="to" placeholder="Arriving at"
-                                        class="w-full border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-red-400">
+                                        class="w-full border border-gray-300 bg-white/90 p-2 text-gray-900 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-red-400">
                                 </div>
                             </div>
 
                             <div class="flex justify-start">
                                 <button type="submit"
-                                    class="w-full rounded bg-[#616161] p-2 text-center text-sm text-white transition-colors duration-200 hover:bg-[#fce7dc] hover:text-[#616161] sm:w-40">Search
+                                    class="w-full rounded bg-black p-2 text-center text-sm text-white transition-colors duration-200 hover:bg-[#fce7dc] hover:text-[#616161] sm:w-40">Search
                                     and find dates</button>
                             </div>
                         </form>
                     </div>
 
                     <div class="tab-content hotels-content hidden">
-                        <h5 class="mb-4 text-2xl font-semibold text-gray-800 sm:text-3xl">
+                        <h5 class="mb-4 text-2xl font-semibold text-black sm:text-3xl">
                             Find the best hotels
                         </h5>
-                        <p class="mb-2 text-gray-700">
+                        <p class="mb-2 text-gray-900">
                             Book a hotel with us and get the best fares and promotions.
                         </p>
-                        <p class="text-gray-700">
+                        <p class="text-gray-900">
                             We know hotels - we know comfort.
                         </p>
 
                         <button
-                            class="mt-4 w-full rounded bg-[#616161] p-2 text-center text-sm text-white transition-colors duration-200 hover:bg-[#fce7dc] hover:text-[#616161] sm:w-40">Search
+                            class="mt-4 w-full rounded bg-black p-2 text-center text-sm text-white transition-colors duration-200 hover:bg-[#fce7dc] hover:text-[#616161] sm:w-40">Search
                             Hotels</button>
                     </div>
 
                     <div class="tab-content rentals-content hidden">
-                        <h5 class="mb-4 text-2xl font-semibold text-gray-800 sm:text-3xl">
+                        <h5 class="mb-4 text-2xl font-semibold text-black sm:text-3xl">
                             Best car rental in the world!
                         </h5>
-                        <p class="text-gray-700">
-                            <span style="background-color:red; height:20px;">DISCOUNT!</span> Special offer if you book
+                        <p class="text-gray-900">
+                            <span class="font-bold text-red-700">DISCOUNT!</span> Special offer if you book
                             today: 25% off anywhere in the world with CarServiceRentalRUs
 
 
                         </p>
                         <input type="text" placeholder="Pick-up point"
-                            class="mt-4 w-full border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-red-400">
+                            class="mt-4 w-full border border-gray-300 bg-white/90 p-2 text-gray-900 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-red-400">
                         <button
-                            class="mt-4 w-full rounded bg-[#616161] p-2 text-center text-sm text-white transition-colors duration-200 hover:bg-[#fce7dc] hover:text-[#616161] sm:w-40">Search
+                            class="mt-4 w-full rounded bg-black p-2 text-center text-sm text-white transition-colors duration-200 hover:bg-[#fce7dc] hover:text-[#616161] sm:w-40">Search
                             Availability</button>
                     </div>
                 </div>
@@ -316,15 +316,26 @@
             }
         }
 
-        #flights-tab:checked~.bg-white .flights-content,
-        #hotels-tab:checked~.bg-white .hotels-content,
-        #rentals-tab:checked~.bg-white .rentals-content {
+        .tab-label {
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+        }
+
+        .tab-panel h5,
+        .tab-panel p,
+        .tab-panel label {
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        #flights-tab:checked~.tab-panel .flights-content,
+        #hotels-tab:checked~.tab-panel .hotels-content,
+        #rentals-tab:checked~.tab-panel .rentals-content {
             display: block;
         }
 
-        #flights-tab:not(:checked)~.bg-white .flights-content,
-        #hotels-tab:not(:checked)~.bg-white .hotels-content,
-        #rentals-tab:not(:checked)~.bg-white .rentals-content {
+        #flights-tab:not(:checked)~.tab-panel .flights-content,
+        #hotels-tab:not(:checked)~.tab-panel .hotels-content,
+        #rentals-tab:not(:checked)~.tab-panel .rentals-content {
             display: none;
         }
     </style>
